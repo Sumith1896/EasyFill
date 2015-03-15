@@ -15,6 +15,15 @@ EasyFill lets the organizer set an event and then the interested students have t
 name and their details are updated in a server which the organizer can access using the event name and password.
 
 ##Requirements
-An android phone and working internet connection.
+An android phone 2.3+ API 10+ and working internet connection.
+
+##How ro setup server
+A server that runs python is necessary.
+Dependence `Flask:v0.10.1`
+1. Install flask.
+2. Run `$python app.py` to set it up in localhost.
+3. The organizer of event can retrieve the data using the event name and password or
+4. Create new event.
+
 
 

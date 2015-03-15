@@ -3,14 +3,15 @@
 
 <h1>EasyFill</h1>
 <br>
-<p>Check out the registered members of an event</p>
+<p>Enter your event name and password</p>
 <form action="" method="post">
   <input type="text" placeholder="Event" name="username" value="{{request.form.username }}">
-  <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+  <input type="password" placeholder="Enter Password" name="password" value="{{request.form.password }}">
+  <input type="password" placeholder="Re-enter Password" name="repassword" value="{{request.form.repassword }}">
+
   <input class="btn btn-default" type="submit" value="Login">
 </form>
-<br>
-To create a new event, click <a href="new">here</a>
+
 
 
 {% endblock %}

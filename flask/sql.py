@@ -28,5 +28,7 @@ with sqlite3.connect('easyfill.db') as connection:
     #c.execute('INSERT INTO reg VALUES("meet","orgies")')
     #c.execute('INSERT INTO reg VALUES("spriha","moodi")')
     #c.execute('INSERT INTO reg VALUES("spriha","orgies")')
-    c.execute('INSERT INTO events VALUES("ecell","ecell")')
+    #c.execute('INSERT INTO events VALUES("ecell","ecell")')
+    #c.execute('CREATE TABLE stds(name TEXT, rollno TEXT, hostel TEXT, phone TEXT, email TEXT, eventname TEXT)')
+    c.execute('INSERT INTO stds VALUES("Spriha", "144250081", "H15C", "9167534840", "spriha@gmail.com","wncc")')
 

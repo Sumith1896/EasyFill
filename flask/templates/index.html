@@ -2,14 +2,15 @@
 {% block content %}
 
 <h1>Welcome to EasyFill!</h1>
-<br>
 <p>Click <a href="/logout">here</a> to logout.</p>
-<br><br>
+<h2><strong>Eventname: </strong>{{ event }} </h2>
+
 <h3>Posts:</h3>
+<h3>Name&nbsp&nbsp&nbsp&nbspRoll&nbsp&nbsp&nbsp&nbspHostel&nbsp&nbsp&nbsp&nbspPhone&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEmail</h3>
+  
 {% for post in posts %}
-  <strong>Name:</strong> {{ post.name }} <br>
-  <strong>Eventname:</strong> {{ post.eventname }} <br>
-<br>
+<p>{{ post.name }} {{ post.rollno }} {{ post.hostel }} {{ post.phone }} {{ post.email }} <br>
+ 
 {% endfor %}
 
 {% endblock %}

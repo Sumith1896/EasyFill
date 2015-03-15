@@ -37,24 +37,53 @@ def login():
 			if request.form['password'] == post['passwd']:
 				session['logged_in'] = True
 				flash('You were logged in.')
-				curr = g.db.execute('select * from reg where eventname = ?',(request.form['username'],))
-				posts = [dict(name=row[0], eventname=row[1]) for row in curr.fetchall()]
+				curr = g.db.execute('select * from stds where eventname = ?',(request.form['username'],))
+				event = request.form['username']
+				posts = [dict(name=row[0], rollno=row[1], hostel=row[2], phone=row[3], email=row[4],eventname=row[5]) for row in curr.fetchall()]
 				g.db.close()
-				return render_template('index.html', posts=posts)  # render a template
+				return render_template('index.html', posts=posts, event=event)  # render a template
 		else:
 			error = 'Invalid Credentials. Please try again.'
 	return render_template('login.html', error=error)
 
-
-@app.route('/reg/<path:path>')
+@app.route('/reg/<path>', methods=['GET', 'POST'])
 def register(path):
 	if request.method == 'POST':
-		g.db = connect_db()
-		cur = g.db.execute('INSERT INTO reg VALUES(?,?)',(request.form['username'], path))
-		g.db.close()
-	return render_template('success.html', error=error)
+	# 	g.db = connect_db()
+	# 	print "hello1"
+	# 	print "INSERT INTO reg VALUES (\""+request.form['username']+"\" , \""+path+"\"); "
+	# 	g.db.execute("INSERT INTO reg VALUES (\""+request.form['username']+"\" , \""+path+"\"); ")
+	# 	print (request.form['username'], path)
+	# 	g.db.close()
+	# return render_template('success.html')
+		import sqlite3
 
+# create a new database if the database doesn't already exist
+		with sqlite3.connect('easyfill.db') as connection:
 
+    # get a cursor object used to execute SQL commands
+			c = connection.cursor()
+			c.execute("INSERT INTO stds VALUES (\""+request.form['name']+"\" ,\""+request.form['rollno']+"\",\""+request.form['hostel']+"\",\""+request.form['phone']+"\",\""+request.form['email']+"\" \""+path+"\"); ")
+    		return render_template('success.html')
+
+@app.route('/new', methods=['GET', 'POST'])
+#@login_required
+def new():
+	error =None
+	if request.method == 'POST':
+		import sqlite3
+		with sqlite3.connect('easyfill.db') as connection:
+			c = connection.cursor()
+			event = request.form['username']
+			passwd = request.form['password']
+			repasswd = request.form['repassword']
+
+			if passwd == repasswd:
+				c.execute("INSERT INTO events VALUES (\""+event+"\" , \""+passwd+"\"); ")
+				return render_template('success.html', error=error)
+			else:
+				error = 'Passwords do not match. Please try again.'
+	return render_template('new.html', error=error)
 
 @app.route('/welcome')
 def welcome():
