@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>EasyFill</h1>
+<br>
+<p>Check out the registered members of an event</p>
+<form action="" method="post">
+  <input type="text" placeholder="Event" name="username" value="{{request.form.username }}">
+  <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+  <input class="btn btn-default" type="submit" value="Login">
+</form>
+
+
+
+{% endblock %}
