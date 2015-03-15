@@ -1,8 +1,8 @@
 A hackathon idea for hackathon conducted by WnCC, IIT Bombay in association with GDG amd Facebook<br/>
 ##Contributors
-[Meet](https://github.com/udiboy1209)
-[Spriha](https://github.com/sprihabiswas)
-[Sumith](https://github.com/Sumith1896)
+[Meet](https://github.com/udiboy1209)<br/>
+[Spriha](https://github.com/sprihabiswas)<br/>
+[Sumith](https://github.com/Sumith1896)<br/>
 
 ##Language
 Java, JavaScript, Flask with SQLite dependence
