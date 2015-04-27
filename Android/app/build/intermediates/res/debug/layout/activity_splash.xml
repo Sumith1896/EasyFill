@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/wallpaper" >
+
+<ImageView
+    android:id="@+id/imgLogo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/forms2"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="30dp"
+    android:textColor="#fefdff33"
+    android:fontFamily="Times New Roman"
+    android:textStyle="italic"
+    android:gravity="center_horizontal"
+    android:text="Easy Fill"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="40dp"
+    android:id="@+id/TextViewSplash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by Meet Udeshi, Sumith &amp; Spriha Biswas"
+        android:id="@+id/textView3"
+        android:layout_marginTop="52dp"
+        android:textColor="#ff328dff"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:layout_below="@+id/imgLogo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout><!-- From: file:/home/udiboy1209/Projects/Android/EasyFill/app/src/main/res/layout/activity_splash.xml -->
