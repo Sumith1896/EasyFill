@@ -1,149 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/wallpaper">
+    android:background="#FF2233"
+    android:paddingTop="30dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Name :"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
         android:id="@+id/textViewName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="70dp"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:layout_alignTop="@+id/editTextName"
+        android:layout_alignBottom="@+id/editTextName"
+        android:layout_toLeftOf="@+id/editTextName"
+        style="@style/Label"/>
 
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/editTextName"
-        android:layout_alignTop="@+id/textViewName"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffffff"
-        android:clickable="true"
-        android:editable="true" />
+        android:layout_alignParentTop="true"
+        style="@style/Field"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Phone no. :"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:id="@+id/textView"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/editTextName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textViewPhone"
+        android:layout_alignTop="@+id/editTextPhone"
+        android:layout_alignBottom="@+id/editTextPhone"
+        android:layout_toLeftOf="@+id/editTextPhone"
+        style="@style/Label"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="phone"
-        android:ems="10"
         android:id="@+id/editTextPhone"
-        android:layout_alignTop="@+id/textView"
+        android:layout_below="@+id/editTextName"
         android:layout_alignLeft="@+id/editTextName"
-        android:layout_alignStart="@+id/editTextName"
-        android:textColor="#ffffffff"
-        android:clickable="true"
-        android:editable="true" />
+        style="@style/Field"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Email id :"
-        android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/textView6"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/editTextPhone"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textViewEmail"
+        android:layout_alignTop="@+id/editTextEmail"
+        android:layout_alignBottom="@+id/editTextEmail"
+        android:layout_toLeftOf="@+id/editTextEmail"
+        style="@style/Label"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:inputType="textEmailAddress"
-        android:ems="10"
         android:id="@+id/editTextEmail"
         android:layout_below="@+id/editTextPhone"
         android:layout_alignLeft="@+id/editTextPhone"
-        android:layout_alignStart="@+id/editTextPhone"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:clickable="true"
-        android:editable="true" />
+        style="@style/Field"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Hostel : "
-        android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/textView7"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/editTextEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textViewHostel"
+        android:layout_alignTop="@+id/editTextHostel"
+        android:layout_alignBottom="@+id/editTextHostel"
+        android:layout_toLeftOf="@+id/editTextHostel"
+        style="@style/Label"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:layout_marginTop="25dp"
-        android:ems="10"
+        android:inputType="text|textPostalAddress"
         android:id="@+id/editTextHostel"
         android:layout_below="@+id/editTextEmail"
         android:layout_alignLeft="@+id/editTextEmail"
-        android:layout_alignStart="@+id/editTextEmail"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:clickable="true"
-        android:editable="true" />
+        style="@style/Field" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Roll no. :"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:id="@+id/textView8"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/editTextHostel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textViewRollno"
+        android:layout_alignTop="@+id/editTextRollno"
+        android:layout_alignBottom="@+id/editTextRollno"
+        android:layout_toLeftOf="@+id/editTextRollno"
+        style="@style/Label"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:inputType="text"
-        android:ems="10"
         android:id="@+id/editTextRollno"
         android:layout_below="@+id/editTextHostel"
         android:layout_alignLeft="@+id/editTextHostel"
-        android:layout_alignStart="@+id/editTextHostel"
-        android:textColor="#ffffffff"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:editable="true"
-        android:clickable="true" />
+        style="@style/Field"/>
 
     <ImageButton
         android:layout_width="60dp"

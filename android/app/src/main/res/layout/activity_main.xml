@@ -18,7 +18,7 @@
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:maxHeight="100dp"
         android:editable="true"
@@ -35,7 +35,7 @@
         android:textStyle="bold"
         android:textColor="#ffffffff"
         android:textSize="25sp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
@@ -56,7 +56,7 @@
         android:onClick="go_web"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="89dp"
+        android:layout_marginBottom="15dp"
         android:textColor="#ffffffff" />
 
     <Button
@@ -76,5 +76,35 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR "
+        android:id="@+id/tv2"
+        android:layout_below="@+id/URL"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCAN QR CODE"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/scan_qr"
+        android:textSize="20sp"
+        android:background="@drawable/button_bg"
+        android:outlineProvider="paddedBounds"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="get_qr" />
 
 </RelativeLayout>

@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.udiboy.easyfill">
-<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/form_icon"
@@ -34,7 +37,12 @@
         </activity>
         <activity android:name=".WebActivity"
             android:screenOrientation="portrait"
-            android:label="web"></activity>
+            android:label="web">
+        </activity>
+        <activity android:name=".QRActivity"
+            android:screenOrientation="portrait"
+            android:label="Scan QR code">
+        </activity>
     </application>
 
 </manifest>

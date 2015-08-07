@@ -53,10 +53,16 @@ public class MainActivity extends Activity {
         phone=prefs.getString(UserData.Phone,"");
     }
 
+    public void get_qr(View v){
+        Intent i = new Intent(this, QRActivity.class);
+        startActivityForResult(i,1);
+    }
+
     public void change_credentials(View v){
         Intent i=new Intent(this,UserData.class);
         startActivity(i);
     }
+
     public void go_web(View v){
         String url=((TextView)findViewById(R.id.URL)).getText().toString();
 
@@ -69,6 +75,18 @@ public class MainActivity extends Activity {
                 startActivity(i);
             } else
                 new ServerTask().execute("http://10.0.2.2:5000/reg/" + url);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode==RESULT_OK){
+            String url = data.getStringExtra("decoded");
+            Intent i = new Intent(this, WebActivity.class);
+            i.putExtra("url", url);
+            startActivity(i);
         }
     }
 
